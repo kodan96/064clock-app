@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/styles.min.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clock App</title>
+</head>
+<body>
+    <main>
+        <div class="container">
+
+            <div class="bg">
+                <div class="overlay"></div>
+                <picture class="day-bg">
+                    <source media="(min-width: 1000px)" srcset="assets/desktop/bg-image-daytime.jpg">
+                    <source media="(min-width: 600px)" srcset="assets/tablet/bg-image-daytime.jpg">
+                    <img src="assets/mobile/bg-image-daytime.jpg" alt="">
+                </picture>
+
+                <picture class="night-bg">
+
+                    <source media="(min-width: 1000px)" srcset="assets/desktop/bg-image-nighttime.jpg">
+                    <source media="(min-width: 600px)" srcset="assets/tablet/bg-image-nighttime.jpg">
+                    <img src="assets/mobile/bg-image-nighttime.jpg" alt="">
+                </picture>
+            </div>
+    
+            <div class="header_wrapper">
+                <div>
+                    <h1 class="quote"></h1>
+                    <p class="author"></p>
+                </div>
+                <img src="assets/desktop/icon-refresh.svg" alt="" class="refresh">
+            </div>
+        
+
+            
+            
+            <div class="clock">
+                <div class="daytime">
+                    <div class="welcome">
+                        <div class="icons">
+                            <img src="assets/desktop/icon-sun.svg" alt="" class="day">
+                            <img src="assets/desktop/icon-moon.svg" alt="" class="night">
+                            
+                        </div>
+                        <div><p class="welcome-message"></p></div>
+                    </div>
+                    <div class="time">
+                        <time class="current-time"></time><span class="timezone-short">cest</span>
+                        <div class="location"><p class="local"></p></div>
+                    </div>
+                </div>
+                <div class="toggle_main">
+                    <span class="more">MORE</span>
+                    <span class="less">LESS</span>
+                    <div class="inner-circle">
+                        <img src="assets/desktop/icon-arrow-down.svg" alt="">
+                    </div>
+                </div>
+            </div>
+            
+        
+        </div>
+        <div class="more_info">
+            <div class="flex-wrap">
+                <div>
+                    <div class="more_info--wrapper">
+                        <span class="category">Current Timezone</span>
+                        <span class="data timezone"></span>
+                    </div>
+                    <div class="more_info--wrapper">
+                        <span class="category">Day of the Year</span>
+                        <span class="data day-of-year"></span>
+                    </div>
+                </div>
+                <div>
+                    <div class="more_info--wrapper">
+                        <span class="category">Day of the Week</span>
+                        <span class="data day-of-week"></span>
+                    </div>
+                    <div class="more_info--wrapper">
+                        <span class="category">Week Number</span>
+                        <span class="data num-of-week"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/luxon/3.4.4/luxon.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
