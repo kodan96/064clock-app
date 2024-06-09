@@ -1,12 +1,6 @@
 window.addEventListener('DOMContentLoaded', () => {
 
-    setTimeout(() => {
-        $('.quote').slideDown();
-    }, 1000)
-
-    setTimeout(() => {
-        $('.author').slideDown();
-    }, 1500)
+    
 
 
     function fetchQuote() {
